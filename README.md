@@ -11,12 +11,14 @@ or
 proof-of-concept.](https://www.repostatus.org/badges/latest/concept.svg)](https://www.repostatus.org/#concept)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/numerals)](https://CRAN.R-project.org/package=numerals)
+[![R build
+status](https://github.com/joeroe/numerals/workflows/R-CMD-check/badge.svg)](https://github.com/joeroe/numerals/actions)
 <!-- badges: end -->
 
-**numerals** is an R package that extends the base numeric types so that
-they can be printed as UTF digits from international numeral systems. It
-currently supports Eastern Arabic (`"ar"`) and Persian (`"fa"`)
-numerals.
+**numerals** is an R package that extends the base numeric types with
+methods for printing using UTF digits from international numeral
+systems. It currently supports Eastern Arabic (`"ar"`) and Persian
+(`"fa"`) numerals.
 
 ## Installation
 
