@@ -75,7 +75,7 @@ data(pressure)
 pressure$temperature <- numeral(pressure$temperature, "ar")
 pressure$pressure <- numeral(pressure$pressure, "ar")
 
-plot(pressure$temperature, pressure$temperature)
+plot(pressure$temperature, pressure$pressure)
 
 ggplot(pressure, aes(temperature, pressure)) + geom_point()
 ```
