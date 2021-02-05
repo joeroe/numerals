@@ -1,5 +1,5 @@
 Package: numerals
-Title: Numeral Systems
+Title: UTF Numeral Systems
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Joe",
@@ -7,8 +7,9 @@ Authors@R:
            role = c("aut", "cre"),
            email = "joe@joeroe.io",
            comment = c(ORCID = "0000-0002-1011-1244"))
-Description: Provides an S3 vector class ('numeral') representing numerics in
-   different numeral systems.
+Description: Extends the base numeric types so that they can be formatted and
+   printed as UTF characters in international numeral systems. Currently 
+   supports Eastern Arabic ('ar') and Persian ('fa') numerals.
 License: MIT + file LICENSE
 Suggests: 
     testthat

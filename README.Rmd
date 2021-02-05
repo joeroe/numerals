@@ -20,37 +20,68 @@ knitr::opts_chunk$set(
 [![CRAN status](https://www.r-pkg.org/badges/version/numerals)](https://CRAN.R-project.org/package=numerals)
 <!-- badges: end -->
 
-The goal of numerals is to ...
+'''numerals''' is an R package that extends the base numeric types so that they can be printed as UTF characters in international numeral systems. 
+It currently supports Eastern Arabic (`"ar"`) and Persian (`"fa"`) numerals.
 
 ## Installation
 
+You can install the development version of numerals from GitHub using [devtools](https://devtools.r-lib.org/):
+
+```r
+# install.package("devtools")
+devtools::install_github("joeroe/numerals")
+```
+
+numerals has not yet been released on CRAN.
+
+<!--
 You can install the released version of numerals from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 install.packages("numerals")
 ```
+-->
 
-## Example
+## Usage
 
-This is a basic example which shows you how to solve a common problem:
+`numeral()` creates a numeric vector which is printed in another numeral system:
 
-```{r example}
-library(numerals)
-## basic example code
+```{r eg-numerals}
+library("numerals")
+# Eastern Arabic numerals
+numeral(1:10, "ar")
+
+# Persian numerals
+numeral(1:10, "fa")
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+Numerals are compatible with both base and tidyverse packages.
+For example, they are printed in data frames and [tibbles](https://tibble.tidyverse.org/):
 
-```{r cars}
-summary(cars)
+```{r eg-tibbles}
+library("tibble")
+x <- data.frame(en = 1:10, ar = numeral(1:10, "ar"), fa = numeral(1:10, "ar"))
+
+x
+as_tibble(x)
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
+And can be used as scales in base and [ggplot2](https://ggplot2.tidyverse.org/):
 
-You can also embed plots, for example:
+```{r eg-plot, echo=FALSE, fig.show="hold", out.width="50%"}
+library("ggplot2")
 
-```{r pressure, echo = FALSE}
-plot(pressure)
+data(pressure)
+pressure$temperature <- numeral(pressure$temperature, "ar")
+pressure$pressure <- numeral(pressure$pressure, "ar")
+
+plot(pressure$temperature, pressure$temperature)
+
+ggplot(pressure, aes(temperature, pressure)) + geom_point()
 ```
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
+Otherwise, numerals are freely coerciable to base numerics and so can be used in calculations:
+
+```{r eg-calc}
+numeral(2, "ar") * 10
+```
