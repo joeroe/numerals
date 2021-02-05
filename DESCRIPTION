@@ -1,0 +1,24 @@
+Package: numerals
+Title: Numeral Systems
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Joe",
+           family = "Roe",
+           role = c("aut", "cre"),
+           email = "joe@joeroe.io",
+           comment = c(ORCID = "0000-0002-1011-1244"))
+Description: Provides an S3 vector class ('numeral') representing numerics in
+   different numeral systems.
+License: MIT + file LICENSE
+Suggests: 
+    testthat
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    vctrs,
+    stringi,
+    rlang
+Depends: 
+    R (>= 2.10)
