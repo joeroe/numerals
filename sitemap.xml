@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>numerals.joeroe.io/index.html</loc>
+  </url>
+  <url>
+    <loc>numerals.joeroe.io/reference/numeral.html</loc>
+  </url>
+  <url>
+    <loc>numerals.joeroe.io/reference/numerals-package.html</loc>
+  </url>
+  <url>
+    <loc>numerals.joeroe.io/reference/numerals-vctrs.html</loc>
+  </url>
+  <url>
+    <loc>numerals.joeroe.io/reference/numr_replace.html</loc>
+  </url>
+  <url>
+    <loc>numerals.joeroe.io/reference/numr_system.html</loc>
+  </url>
+</urlset>
