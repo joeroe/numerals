@@ -14,8 +14,8 @@ status](https://www.r-pkg.org/badges/version/numerals)](https://CRAN.R-project.o
 <!-- badges: end -->
 
 **numerals** is an R package that extends the base numeric types so that
-they can be printed as UTF characters in international numeral systems.
-It currently supports Eastern Arabic (`"ar"`) and Persian (`"fa"`)
+they can be printed as UTF digits from international numeral systems. It
+currently supports Eastern Arabic (`"ar"`) and Persian (`"fa"`)
 numerals.
 
 ## Installation

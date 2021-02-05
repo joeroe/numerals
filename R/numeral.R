@@ -5,7 +5,36 @@ methods::setOldClass(c("numeral", "vctrs_vctr"))
 
 # Construct ---------------------------------------------------------------
 
+#' Numeral class
+#'
+#' @description
+#' The `numeral` class extends the base numeric vectors with methods for
+#' printing them using UTF digits from other numeral systems.
+#'
+#' @param x A numeric vector.
+#' @param system Two-letter language code of the desired numeral system; see
+#'  details for a list of available systems. Default: `"en"`.
+#'
+#' @details
+#' The following numeral systems are currently supported:
+#'
+#' * `"en"`: Western Arabic numerals (the default display in base R)
+#' * `"ar"`: Eastern Arabic numerals
+#' * `"fa"`: Persian numerals
+#'
+#' Decimal separators etc. are not currently localised.
+#'
+#' @return
+#' Vector of class `numeral`.
+#'
 #' @export
+#'
+#' @examples
+#' # Eastern Arabic numerals
+#' numeral(1:10, "ar")
+#'
+#' # Persian numerals
+#' numeral(1:10, "fa")
 numeral <- function(x = numeric(), system = c("en", "ar", "fa")) {
   x <- vec_cast(x, numeric())
   system <- rlang::arg_match(system)
@@ -150,5 +179,18 @@ vec_arith.numeral.MISSING <- function(op, x, y, ...) {
 
 # Attributes --------------------------------------------------------------
 
+#' Get or set the numeral system of a vector
+#'
+#' These functions retrieve or replace the `system` attribute of a [numeral]
+#' vector.
+#'
+#' @param x [numeral] vector.
+#'
 #' @export
-numr_system <- function(x) attr(x, "system")
+#'
+#' @examples
+#' x <- numeral(1, "ar")
+#' numr_system(x)
+numr_system <- function(x) {
+  attr(x, "system")
+}

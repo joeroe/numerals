@@ -6,9 +6,9 @@
 \alias{numerals-package}
 \title{numerals: UTF Numeral Systems}
 \description{
-Extends the base numeric types so that they can be formatted and
-   printed as UTF characters in international numeral systems. Currently 
-   supports Eastern Arabic ('ar') and Persian ('fa') numerals.
+Extends the base numeric types with methods for printing using UTF
+   digits from international numeral systems. Currently supports Eastern Arabic
+   ('ar') and Persian ('fa') numerals.
 }
 \author{
 \strong{Maintainer}: Joe Roe \email{joe@joeroe.io} (\href{https://orcid.org/0000-0002-1011-1244}{ORCID})

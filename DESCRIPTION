@@ -7,9 +7,9 @@ Authors@R:
            role = c("aut", "cre"),
            email = "joe@joeroe.io",
            comment = c(ORCID = "0000-0002-1011-1244"))
-Description: Extends the base numeric types so that they can be formatted and
-   printed as UTF characters in international numeral systems. Currently 
-   supports Eastern Arabic ('ar') and Persian ('fa') numerals.
+Description: Extends the base numeric types with methods for printing using UTF
+   digits from international numeral systems. Currently supports Eastern Arabic
+   ('ar') and Persian ('fa') numerals.
 License: MIT + file LICENSE
 Suggests: 
     testthat
