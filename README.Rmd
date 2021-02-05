@@ -80,7 +80,7 @@ plot(pressure$temperature, pressure$temperature)
 ggplot(pressure, aes(temperature, pressure)) + geom_point()
 ```
 
-Otherwise, numerals are freely coerciable to base numerics and so can be used in calculations:
+Otherwise, numerals are freely coercible to base numerics and so can be used in calculations:
 
 ```{r eg-calc}
 numeral(2, "ar") * 10
