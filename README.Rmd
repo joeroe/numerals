@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 [![CRAN status](https://www.r-pkg.org/badges/version/numerals)](https://CRAN.R-project.org/package=numerals)
 <!-- badges: end -->
 
-'''numerals''' is an R package that extends the base numeric types so that they can be printed as UTF characters in international numeral systems. 
+**numerals** is an R package that extends the base numeric types so that they can be printed as UTF characters in international numeral systems. 
 It currently supports Eastern Arabic (`"ar"`) and Persian (`"fa"`) numerals.
 
 ## Installation
@@ -66,6 +66,7 @@ x
 as_tibble(x)
 ```
 
+<!--
 And can be used as scales in base and [ggplot2](https://ggplot2.tidyverse.org/):
 
 ```{r eg-plot, echo=FALSE, fig.show="hold", out.width="50%"}
@@ -79,6 +80,7 @@ plot(pressure$temperature, pressure$pressure)
 
 ggplot(pressure, aes(temperature, pressure)) + geom_point()
 ```
+-->
 
 Otherwise, numerals are freely coercible to base numerics and so can be used in calculations:
 
