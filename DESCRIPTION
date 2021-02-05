@@ -1,5 +1,5 @@
 Package: numerals
-Title: UTF Numeral Systems
+Title: Numeric Vectors with Unicode Numerals
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Joe",
@@ -7,8 +7,8 @@ Authors@R:
            role = c("aut", "cre"),
            email = "joe@joeroe.io",
            comment = c(ORCID = "0000-0002-1011-1244"))
-Description: Extends the base numeric types with methods for printing using UTF
-   digits from international numeral systems. Currently supports Eastern Arabic
+Description: Extends the base numeric types with methods for printing using 
+   Unicode digits from other numeral systems. Currently supports Eastern Arabic
    ('ar'), Bengali ('bn'), Persian ('fa'), and Burmese ('my') numerals.
 License: MIT + file LICENSE
 Suggests: 

@@ -4,10 +4,10 @@
 \name{numerals-package}
 \alias{numerals}
 \alias{numerals-package}
-\title{numerals: UTF Numeral Systems}
+\title{numerals: Numeric Vectors with Unicode Numerals}
 \description{
-Extends the base numeric types with methods for printing using UTF
-   digits from international numeral systems. Currently supports Eastern Arabic
+Extends the base numeric types with methods for printing using 
+   Unicode digits from other numeral systems. Currently supports Eastern Arabic
    ('ar'), Bengali ('bn'), Persian ('fa'), and Burmese ('my') numerals.
 }
 \seealso{

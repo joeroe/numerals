@@ -16,9 +16,9 @@ status](https://github.com/joeroe/numerals/workflows/R-CMD-check/badge.svg)](htt
 <!-- badges: end -->
 
 **numerals** is an R package that extends the base numeric types with
-methods for printing using UTF digits from international numeral
-systems. It currently supports Eastern Arabic (`"ar"`), Bengali
-(`"bn"`), Persian (`"fa"`), and Burmese (`"my"`) numerals.
+methods for printing using Unicode digits in other numeral systems. It
+currently supports Eastern Arabic (`"ar"`), Bengali (`"bn"`), Persian
+(`"fa"`), and Burmese (`"my"`) numerals.
 
 ## Installation
 
