@@ -60,7 +60,7 @@ For example, they are printed in data frames and [tibbles](https://tibble.tidyve
 
 ```{r eg-tibbles}
 library("tibble")
-x <- data.frame(en = 1:10, ar = numeral(1:10, "ar"), fa = numeral(1:10, "ar"))
+x <- data.frame(en = 1:10, ar = numeral(1:10, "ar"), fa = numeral(1:10, "fa"))
 
 x
 as_tibble(x)
