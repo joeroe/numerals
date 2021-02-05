@@ -1,5 +1,9 @@
+# numeral.R
+# S3 vector class numeral (numr): numerics in other numeral systems
 
-# Constructors ------------------------------------------------------------
+methods::setOldClass(c("numeral", "vctrs_vctr"))
+
+# Construct ---------------------------------------------------------------
 
 #' @export
 numeral <- function(x = numeric(), system = c("en", "ar", "fa")) {
@@ -15,7 +19,7 @@ new_numeral <- function(x = numeric(), system = character()) {
 }
 
 
-# Validators --------------------------------------------------------------
+# Validate ----------------------------------------------------------------
 
 is_numeral <- function(x) {
   inherits(x, "numeral")
@@ -33,6 +37,9 @@ format.numeral <- function(x, ...) {
   out <- numr_replace(out, numr_system(x))
   out
 }
+
+
+# Cast/coerce -------------------------------------------------------------
 
 
 # Attributes --------------------------------------------------------------
