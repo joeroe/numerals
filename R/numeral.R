@@ -41,6 +41,27 @@ format.numeral <- function(x, ...) {
 
 # Cast/coerce -------------------------------------------------------------
 
+#' @export
+vec_ptype2.numeral.numeral <- function(x, y, ...) {
+  new_numeral(system = numr_system(x))
+}
+
+#' @export
+vec_cast.numeral.numeral <- function(x, to, ...) {
+  new_numeral(vec_data(x), system = numr_system(to))
+}
+
+#' @export
+vec_ptype2.numeral.double <- function(x, y, ...) x
+
+#' @export
+vec_ptype2.double.numeral <- function(x, y, ...) y
+
+#' @export
+vec_cast.numeral.double <- function(x, to, ...) new_numeral(x, system = numr_system(to))
+
+#' @export
+vec_cast.double.numeral <- function(x, to, ...) vec_data(x)
 
 # Attributes --------------------------------------------------------------
 
