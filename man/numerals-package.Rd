@@ -8,7 +8,7 @@
 \description{
 Extends the base numeric types with methods for printing using UTF
    digits from international numeral systems. Currently supports Eastern Arabic
-   ('ar'), Bengali ('bn'), and Persian ('fa') numerals.
+   ('ar'), Bengali ('bn'), Persian ('fa'), and Burmese ('my') numerals.
 }
 \seealso{
 Useful links:

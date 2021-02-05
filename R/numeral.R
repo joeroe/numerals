@@ -20,7 +20,9 @@ methods::setOldClass(c("numeral", "vctrs_vctr"))
 #'
 #' * `"en"`: Western Arabic numerals (the default display in base R)
 #' * `"ar"`: Eastern Arabic numerals
+#' * `"bn"`: Bengali numerals
 #' * `"fa"`: Persian numerals
+#' * `"my"`: Burmese numerals
 #'
 #' Decimal separators etc. are not currently localised.
 #'
@@ -35,7 +37,7 @@ methods::setOldClass(c("numeral", "vctrs_vctr"))
 #'
 #' # Persian numerals
 #' numeral(1:10, "fa")
-numeral <- function(x = numeric(), system = c("en", "ar", "bn", "fa")) {
+numeral <- function(x = numeric(), system = c("en", "ar", "bn", "fa", "my")) {
   x <- vec_cast(x, numeric())
   system <- rlang::arg_match(system)
   new_numeral(x, system)

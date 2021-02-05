@@ -4,7 +4,7 @@
 \alias{numeral}
 \title{Numeral class}
 \usage{
-numeral(x = numeric(), system = c("en", "ar", "bn", "fa"))
+numeral(x = numeric(), system = c("en", "ar", "bn", "fa", "my"))
 }
 \arguments{
 \item{x}{A numeric vector.}
@@ -24,7 +24,9 @@ The following numeral systems are currently supported:
 \itemize{
 \item \code{"en"}: Western Arabic numerals (the default display in base R)
 \item \code{"ar"}: Eastern Arabic numerals
+\item \code{"bn"}: Bengali numerals
 \item \code{"fa"}: Persian numerals
+\item \code{"my"}: Burmese numerals
 }
 
 Decimal separators etc. are not currently localised.
