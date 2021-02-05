@@ -35,7 +35,7 @@ methods::setOldClass(c("numeral", "vctrs_vctr"))
 #'
 #' # Persian numerals
 #' numeral(1:10, "fa")
-numeral <- function(x = numeric(), system = c("en", "ar", "fa")) {
+numeral <- function(x = numeric(), system = c("en", "ar", "bn", "fa")) {
   x <- vec_cast(x, numeric())
   system <- rlang::arg_match(system)
   new_numeral(x, system)

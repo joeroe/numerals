@@ -8,7 +8,15 @@
 \description{
 Extends the base numeric types with methods for printing using UTF
    digits from international numeral systems. Currently supports Eastern Arabic
-   ('ar') and Persian ('fa') numerals.
+   ('ar'), Bengali ('bn'), and Persian ('fa') numerals.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/joeroe/numerals}
+  \item Report bugs at \url{https://github.com/joeroe/numerals/issues}
+}
+
 }
 \author{
 \strong{Maintainer}: Joe Roe \email{joe@joeroe.io} (\href{https://orcid.org/0000-0002-1011-1244}{ORCID})

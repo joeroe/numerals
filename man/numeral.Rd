@@ -4,7 +4,7 @@
 \alias{numeral}
 \title{Numeral class}
 \usage{
-numeral(x = numeric(), system = c("en", "ar", "fa"))
+numeral(x = numeric(), system = c("en", "ar", "bn", "fa"))
 }
 \arguments{
 \item{x}{A numeric vector.}
