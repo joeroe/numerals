@@ -28,8 +28,6 @@ The following numeral systems are currently supported:
 \item \code{"fa"}: Persian numerals
 \item \code{"my"}: Burmese numerals
 }
-
-Decimal separators etc. are not currently localised.
 }
 \examples{
 # Eastern Arabic numerals

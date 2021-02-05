@@ -24,8 +24,6 @@ methods::setOldClass(c("numeral", "vctrs_vctr"))
 #' * `"fa"`: Persian numerals
 #' * `"my"`: Burmese numerals
 #'
-#' Decimal separators etc. are not currently localised.
-#'
 #' @return
 #' Vector of class `numeral`.
 #'
