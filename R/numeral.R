@@ -63,6 +63,48 @@ vec_cast.numeral.double <- function(x, to, ...) new_numeral(x, system = numr_sys
 #' @export
 vec_cast.double.numeral <- function(x, to, ...) vec_data(x)
 
+
+# Arithmetic --------------------------------------------------------------
+
+#' @method vec_arith numeral
+#' @export
+vec_arith.numeral <- function(op, x, y, ...) {
+  UseMethod("vec_arith.numeral", y)
+}
+
+#' @method vec_arith.numeral default
+#' @export
+vec_arith.numeral.default <- function(op, x, y, ...) {
+  stop_incompatible_op(op, x, y)
+}
+
+#' @method vec_arith.numeral numeral
+#' @export
+vec_arith.numeral.numeral <- function(op, x, y, ...) {
+  new_numeral(vec_arith_base(op, x, y), numr_system(x))
+}
+
+#' @method vec_arith.numeral numeric
+#' @export
+vec_arith.numeral.numeric <- function(op, x, y, ...) {
+  new_numeral(vec_arith_base(op, x, y), numr_system(x))
+}
+
+#' @method vec_arith.numeric numeral
+#' @export
+vec_arith.numeric.numeral <- function(op, x, y, ...) {
+  new_numeral(vec_arith_base(op, x, y), numr_system(y))
+}
+
+#' @method vec_arith.numeral MISSING
+#' @export
+vec_arith.numeral.MISSING <- function(op, x, y, ...) {
+  switch(op,
+         `-` = x * -1,
+         `+` = x,
+         stop_incompatible_op(op, x, y))
+}
+
 # Attributes --------------------------------------------------------------
 
 #' @export
