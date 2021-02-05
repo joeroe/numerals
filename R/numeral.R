@@ -25,6 +25,9 @@ is_numeral <- function(x) {
 # Print/format ------------------------------------------------------------
 
 #' @export
+vec_ptype_abbr.numeral <- function(x, ...) "numr"
+
+#' @export
 format.numeral <- function(x, ...) {
   out <- format(vec_data(x))
   out <- numr_replace(out, numr_system(x))
