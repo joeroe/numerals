@@ -2,12 +2,15 @@
 % Please edit documentation in R/numr_replace.R
 \name{numr_replace}
 \alias{numr_replace}
-\title{Replace numerals in a string}
+\alias{numr_substitute}
+\title{Replace numbers with numerals}
 \usage{
 numr_replace(x, system)
+
+numr_substitute(x, system)
 }
 \arguments{
-\item{x}{Character. Input vector.}
+\item{x}{Input vector.}
 
 \item{system}{Two-letter language code of the replacement numeral system.}
 }
@@ -15,9 +18,17 @@ numr_replace(x, system)
 Character vector the same length as \code{x} with numerals replaced.
 }
 \description{
-\code{numr_replace()} replaces the numerals in a string with another numeral
-system. It is vectorised over \code{x}.
+Use these functions to turn a number into a string of Unicode digits from
+another numeral system.
+\code{numr_replace()} takes character vectors and uses string replacement.
+\code{numr_substitute()} takes a numeric vector.
+}
+\details{
+\code{numr_substitute()} is vectorised over \code{x} and \code{system}, which are
+\link[vctrs:vec_recycle]{recycled} to their common length.
+\code{numr_replace()} is vectorised over \code{x}.
 }
 \examples{
-numr_replace("0123456789", "ar")
+numr_replace("0123456789", "fa")
+numr_substitute(0123459789, "fa")
 }

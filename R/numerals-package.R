@@ -13,3 +13,10 @@ NULL
 #' @keywords internal
 #' @name numerals-vctrs
 NULL
+
+#' Internal zeallot functions
+#'
+#' @import zeallot
+#' @keywords internal
+#' @name `%<-%`
+NULL
