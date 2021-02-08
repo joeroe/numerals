@@ -18,6 +18,6 @@ numr_replace <- function(x, system) {
   numerals <- numerals
   stringi::stri_replace_all_coll(x,
                                  c(as.character(0:9), ".", ","),
-                                 numerals[[system]],
+                                 numerals[system,],
                                  vectorize_all = FALSE)
 }
