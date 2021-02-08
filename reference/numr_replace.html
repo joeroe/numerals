@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Replace numerals in a string — numr_replace • numerals</title>
+<title>Replace numbers with numerals — numr_replace • numerals</title>
 
 
 <!-- jquery -->
@@ -39,9 +39,11 @@
 
 
 
-<meta property="og:title" content="Replace numerals in a string — numr_replace" />
-<meta property="og:description" content="numr_replace() replaces the numerals in a string with another numeral
-system. It is vectorised over x." />
+<meta property="og:title" content="Replace numbers with numerals — numr_replace" />
+<meta property="og:description" content="Use these functions to turn a number into a string of Unicode digits from
+another numeral system.
+numr_replace() takes character vectors and uses string replacement.
+numr_substitute() takes a numeric vector." />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@joeroe90" />
 <meta name="twitter:site" content="@joeroe90" />
@@ -112,24 +114,28 @@ system. It is vectorised over x." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Replace numerals in a string</h1>
+    <h1>Replace numbers with numerals</h1>
     <small class="dont-index">Source: <a href='https://github.com/joeroe/numerals/blob/master/R/numr_replace.R'><code>R/numr_replace.R</code></a></small>
     <div class="hidden name"><code>numr_replace.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p><code>numr_replace()</code> replaces the numerals in a string with another numeral
-system. It is vectorised over <code>x</code>.</p>
+    <p>Use these functions to turn a number into a string of Unicode digits from
+another numeral system.
+<code>numr_replace()</code> takes character vectors and uses string replacement.
+<code>numr_substitute()</code> takes a numeric vector.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>numr_replace</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>system</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>numr_replace</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>system</span><span class='op'>)</span>
+
+<span class='fu'>numr_substitute</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>system</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>Character. Input vector.</p></td>
+      <td><p>Input vector.</p></td>
     </tr>
     <tr>
       <th>system</th>
@@ -140,10 +146,16 @@ system. It is vectorised over <code>x</code>.</p>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>Character vector the same length as <code>x</code> with numerals replaced.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p><code>numr_substitute()</code> is vectorised over <code>x</code> and <code>system</code>, which are
+<a href='https://vctrs.r-lib.org/reference/vec_recycle.html'>recycled</a> to their common length.
+<code>numr_replace()</code> is vectorised over <code>x</code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>numr_replace</span><span class='op'>(</span><span class='st'>"0123456789"</span>, <span class='st'>"ar"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "٠١٢٣٤٥٦٧٨٩"</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>numr_replace</span><span class='op'>(</span><span class='st'>"0123456789"</span>, <span class='st'>"fa"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "۰۱۲۳۴۵۶۷۸۹"</div><div class='input'><span class='fu'>numr_substitute</span><span class='op'>(</span><span class='fl'>0123459789</span>, <span class='st'>"fa"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "۱۲۳۴۵۹۷۸۹"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

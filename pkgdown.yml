@@ -2,7 +2,7 @@ pandoc: 2.7.3
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles: {}
-last_built: 2021-02-05T17:25Z
+last_built: 2021-02-08T12:21Z
 urls:
   reference: numerals.joeroe.io/reference
   article: numerals.joeroe.io/articles
