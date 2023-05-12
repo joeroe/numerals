@@ -5,6 +5,9 @@ authors:
     href: "https://joeroe.io"
 
 template:
+  bootstrap: 5
+  includes:
+    in_header: '<script async src="https://umami.joeroe.io/script.js" data-website-id="1bd0869a-bb9a-44f0-ac13-6d2159596366"></script>'
   opengraph:
     twitter:
       creator: "@joeroe90"
