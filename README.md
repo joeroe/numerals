@@ -11,8 +11,7 @@ or
 proof-of-concept.](https://www.repostatus.org/badges/latest/concept.svg)](https://www.repostatus.org/#concept)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/numerals)](https://CRAN.R-project.org/package=numerals)
-[![R build
-status](https://github.com/joeroe/numerals/workflows/R-CMD-check/badge.svg)](https://github.com/joeroe/numerals/actions)
+[![R-CMD-check](https://github.com/joeroe/numerals/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/joeroe/numerals/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 **numerals** is an R package that extends the base numeric types with
@@ -79,7 +78,7 @@ x
 #> 9   9  ٩  ۹
 #> 10 10 ١٠ ۱۰
 as_tibble(x)
-#> # A tibble: 10 x 3
+#> # A tibble: 10 × 3
 #>       en     ar     fa
 #>    <int> <numr> <numr>
 #>  1     1      ١      ۱
@@ -99,8 +98,10 @@ And can be used as scales in base and [ggplot2](https://ggplot2.tidyverse.org/):
 
 
 ```
-#> Don't know how to automatically pick scale for object of type numeral/vctrs_vctr. Defaulting to continuous.
-#> Don't know how to automatically pick scale for object of type numeral/vctrs_vctr. Defaulting to continuous.
+#> Don't know how to automatically pick scale for object of type
+#> <numeral/vctrs_vctr>. Defaulting to continuous.
+#> Don't know how to automatically pick scale for object of type
+#> <numeral/vctrs_vctr>. Defaulting to continuous.
 ```
 
 <img src="man/figures/README-eg-plot-1.png" width="50%" /><img src="man/figures/README-eg-plot-2.png" width="50%" />
